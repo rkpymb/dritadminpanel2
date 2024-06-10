@@ -15,6 +15,7 @@ export default function handler(req, res) {
             mprice: req.body.mprice,
             sprice: req.body.sprice,
             isActive: req.body.isActive,
+            ValidityDay:req.body.ValidityDay
         
         }, { headers }).then((response) => {
             const senddta = response.data;

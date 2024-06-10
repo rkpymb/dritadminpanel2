@@ -6,8 +6,9 @@ import MYS from '../../../Styles/mystyle.module.css'
 
 import Button from '@mui/material/Button';
 import Link from 'next/link'
-import SendIcon from '@mui/icons-material/Send';
+
 import Badge from '@mui/material/Badge';
+import { LuArrowRight } from "react-icons/lu";
 import { LuArrowLeft } from "react-icons/lu";
 import {
 
@@ -55,7 +56,23 @@ function DashboardCrypto() {
                   <small>manage all Posters</small>
                   <div style={{ minHeight: '10px' }}></div>
                   <Link href='/Settings/PosterSliders'>
-                    <Button size='small' variant="outlined" endIcon={<SendIcon />}>
+                    <Button size='small' variant="outlined" endIcon={<LuArrowRight />}>
+                      view more
+                    </Button>
+                  </Link>
+
+                </div>
+                <div className={MYS.DashboardCounterItemB}>
+                  <Image src='/slideshow.png' alt='im' height='50' width='50' />
+                </div>
+              </div>
+              <div className={MYS.DashboardCounterItem}>
+                <div className={MYS.DashboardCounterItemA}>
+                  <span>Payment Methods</span>
+                  <small>manage Payment all methods</small>
+                  <div style={{ minHeight: '10px' }}></div>
+                  <Link href='/Settings/PaymentMethods'>
+                    <Button size='small' variant="outlined" endIcon={<LuArrowRight />}>
                       view more
                     </Button>
                   </Link>

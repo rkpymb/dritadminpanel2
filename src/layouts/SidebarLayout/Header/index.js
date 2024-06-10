@@ -72,8 +72,9 @@ function Header() {
       >
         <div className={MYS.OnlyMobile}>
           <div className={MYS.logomainMobile}>
-            <img src='/logo/weblogo.png' alt='logo' width={'100%'} />
+            <img src='/Logo/logo.png' alt='logo' width={'100%'} />
           </div>
+      
         </div>
       </Stack>
       <Box display="flex" alignItems="center">

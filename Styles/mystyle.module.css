@@ -1,37 +1,1376 @@
-.DatepikerCustom{
+.IconBoxPwa{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.IconBoxPwaA {
+    min-width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #eaeaf1b4;
+    padding: 10px;
+
+}
+.IconBoxPwaB small{
+    font-weight: 600;
+    color: #b1b7ba;
+    margin: 10px;
+
+}
+.IconBoxPwaB{
+    margin-left: 10px;
+}
+.FileGridItemimg {
+    width: 80px;
+
+}
+
+.FileGrid {
+    margin: 0 auto;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.FileGridItem {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.FileGridItemOverlay {
+    background-color: rgba(255, 0, 0, 0.242);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Semi-transparent black background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* Text color */
+}
+
+.Choosefileflex {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.UploadteUploadDetalisBox {
+
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.UploadingboxText {
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.UploadingboxTextDone {
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+.ChoosefileText {
+
+    font-weight: 600;
+    color: #b1b7ba;
+
+}
+
+.FileUploadingbox {
+    width: 100%;
+
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.FileUploadingbox::-webkit-scrollbar {
+    width: 5px;
+}
+
+.FileUploadingbox::-webkit-scrollbar-thumb {
+    background-color: #dee5d9;
+    border-radius: 10px;
+}
+
+.FileUploadingbox::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+
+
+.FileItem img {
+    border-radius: 20px;
+
+}
+
+.PlanInItem {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    border-bottom: 1px solid rgb(242, 234, 234);
+    padding: 5px;
+}
+
+.PlanInItemA {
+    width: 50%;
+
+}
+
+.PlanInItemB {
+    width: 50%;
+}
+
+.PlanInItemA {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.PlanInItemB {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.DbTOptext {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    text-transform: uppercase;
+
+}
+
+.UrlBoxText {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+
+}
+
+.UrlBoxText small {
+    font-weight: 600;
+    color: #405aee;
+    text-transform: uppercase;
+
+}
+
+.UrlBox {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+
+}
+
+.DbTopBoxB {
+    margin-left: 10px;
+}
+
+.DbTOptext span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.SqureimgDb {
+    min-width: 50px;
+}
+
+.DbTopBox {
+    display: flex;
+    align-items: center;
+
+}
+
+.DbTopBoxMain {
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .08);
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.SwitchBox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.SeatBlock1 {
+    width: 100%;
+
+}
+
+.DashboardCounterItemB {
+    min-width: 50px;
+}
+
+.DbBox {
+    padding: 10px;
+}
+
+.InpuTitleXy {
+    display: flex;
+    flex-direction: column;
+}
+
+.InpuTitleXy span {
+    font-weight: 600;
+}
+
+.SettingsItemBox {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .08);
+    padding: 50px;
+    background-color: white;
+
+}
+
+.STitle {
+    display: flex;
+    flex-direction: column;
+}
+
+.STitle span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.STitle small {
+    font-size: 12px;
+
+}
+
+.hinttext {
+    color: #DC7633;
+    margin: 2px;
+}
+
+.Comlteebox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.Comlteebox span {
+    color: #DC7633;
+    font-weight: 600;
+}
+
+.WebidText {
+    color: #DC7633;
+    margin: 2px;
+    font-weight: 600;
+}
+
+.hinttext span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.STitleBig {
+    display: flex;
+    flex-direction: column;
+}
+
+.STitleBig span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.STitleBig small {
+    font-size: 12px;
+
+}
+
+.SettingsItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.BlistGrid {
+    margin: 0 auto;
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+
+
+}
+
+.Blist {
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    margin: 5px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.BlistTop {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.BlistTopLogo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.BrboxMain {
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+.BrboxMainTextB {
+    margin-left: 5px;
+    font-weight: 500;
+    color: white;
+    font-size: 12px;
+
+}
+
+.BrboxMainA {
+    width: 10%;
+
+}
+
+.BrboxMainB {
+    width: 80%;
+    overflow: hidden;
+}
+
+.BrboxMainC {
+    width: 10%;
+
+}
+
+.TopFlexbox {
+    display: flex;
+
+    justify-content: space-between;
+    margin: 5px;
+    align-items: center;
+
+    background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
-    outline: none !important;
-    border: none !important;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, .08);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
+
+.TopFlexboxA {
+    width: 70%;
+}
+
+.TopFlexboxB {
+    width: 30%;
+    padding: 10px;
+}
+
+
+.PlanTitle span {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.PlanTitle small {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.includedBox {
+    margin-top: 20px;
+}
+
+.includedBoxTitle span {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.PTSelctbtnBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d4d4dc;
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 40px;
+
+}
+
+.PTSelctbtnActive {
+    width: 50%;
+    background-color: #5569ff;
+    color: white;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    min-width: fit-content;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.PTSelctbtn {
+    margin: 5px;
+    cursor: pointer;
+    width: 50%;
+    background-color: #f8f1f1;
+
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: rgb(95, 86, 86);
+
+    /* border: 1px solid #d4d4dc; */
+    min-width: fit-content;
+}
+
+
+.Planh {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+}
+
+.PlanhA {
+    text-align: center;
+}
+
+.PlanhA h1 {
+
+    margin: 0;
+
+}
+
+.PlanhAx span {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ea4e4e;
+
+}
+
+.PlanhB {
+    margin: 20px;
+}
+
+.OrderDoneb {
+    padding: 10px;
+
+}
+
+.PGDilogBox {
+    min-width: 400px;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .08);
+    padding: 10px;
+    background-color: white;
+
+}
+
+.CreditBBoxPbox {
+    padding: 20px;
+    width: 100%;
+
+}
+
+.PassOrdermsg {
+    margin: 10px;
+    color: #918147;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+}
+
+.CreditBBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .08);
+    border-radius: 20px;
+}
+
+.CreditBBoxA {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.CreditBBoxB {
+    font-weight: 700;
+    color: #7fce34;
+}
+
+.OrderDonebox {
+    padding: 30px;
+    margin: auto;
+    width: 60%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.OrderDonebox {
+    padding: 30px;
+    margin: auto;
+    width: 60%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.OrderDoneboxText {
+    text-align: center;
+    margin: 10px;
+}
+
+.OrderDoneboxText h1 {
+    color: #212324;
+    font-size: 18px;
+
+}
+
+.OrderDoneboxText span {
+    color: #918147;
+    font-size: 13px;
+
+}
+
+.OrderDoneboxFooter {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.StstatusText {
+    margin-top: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.TodayAtbox {
+    margin-top: 10px;
+}
+
+
+.TodayAtboxB {
+    margin-top: 40px;
+
+}
+
+.OrderDatabox {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .08);
+    padding: 50px;
+
+}
+
+.InvBoxMsg {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.InvBoxItem {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+
+.InvBox {
+    border: 1px solid rgb(220, 209, 209);
+    padding: 10px;
+}
+
+.InvBoxItemA {
+    max-width: 50%;
+}
+
+.InvBoxHeader {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.OrderID {
+    font-weight: 700;
+    font-size: 12px;
+    color: #DC7633;
+
+}
+
+.Statustag {
+    padding: 3px 15px 2px;
+    border-radius: 5px;
+    background-color: #eeeff5;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    color: black;
+
+}
+
+.Statustag span {
+    font-weight: 700;
+    font-size: 12px;
+    color: black;
+}
+
+.OrderTitle {
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.OrderDate {
+    font-size: 12px;
+    margin-top: 10px;
+
+}
+
+
+.OrderStatusA {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.OrderStatusBox {
+    margin: auto;
+    width: 40%;
+
+}
+
+.OrderDoneLottie {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.OrderDoneLottieB {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+
+}
+
+
+
+
+.Rbbox {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(240, 236, 236);
+    margin-top: 20px;
+
+}
+
+.RbboxItem {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+
+.RbboxItemA span {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.RbboxItemB span {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.RechargeBox {
+    padding: 40px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    margin: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.Formbox {
+    max-width: 300px;
+}
+
+.RechargeBoxHeader {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.RechargeBoxHeader span {
+    font-weight: 600;
+
+}
+
+.RechargeBoxHeader small {
+    font-weight: 500;
+
+}
+
+.PlanGrid {
+    margin: 0 auto;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.PlanImg {
+    width: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(233, 229, 225);
+}
+
+.Pricebox {
+    margin: 5px;
+
+}
+
+.Pricebox del {
+    color: red;
+}
+
+.Pricebox span {
+    color: rgb(0, 81, 255);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.PriceboxText small {
+    color: rgb(54, 55, 58);
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.PlanItem {
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    margin: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.PlanTop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.WaringBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, .08);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.WaringBoxA {
+
+    padding: 10px;
+}
+
+.WaringBoxA span {
+    font-weight: 500;
+}
+
+.WaringBoxA small {
+    font-weight: 500;
+    color: red;
+}
+
+.WaringBoxB {
+    padding: 5px;
+}
+
+.UserDTb {
+
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.UserDTb span {
+    font-size: 15px;
+    font-weight: 500;
+
+}
+
+.Productimg {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.LBlogo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.BtnboxPage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, .08);
+    margin-bottom: 20px;
+}
+
+.BtnboxPageA {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.UserCounterGrid {
+    margin: 0 auto;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.WalletItemtop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Counterbox {
+    margin: 20px;
+}
+
+.UserCounterItem {
+    box-shadow: 0 6px 5px rgba(0, 0, 0, .08);
+    padding: 10px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgb(228, 181, 126);
+
+}
+
+.UserCounterItemA {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.UserCounterItemB {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.itemOrderM {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemOrderBB {
+    margin-top: 10px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.UserItemMain {
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    margin: 5px;
+    background-color: white;
+}
+
+.itemOrderM span {
+    font-weight: 600;
+    font-size: 15px;
+
+}
+
+.itemOrderM small {
+    font-weight: 500;
+    font-size: 12px;
+
+}
+
+.PMItemFABB {
+    display: flex;
+    align-items: center;
+}
+
+.BoxTitle {
+    margin: 10px;
+    font-weight: 600;
+    font-size: 15px;
+
+}
+
+.MboxMain {
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.UserItemTop {
+    display: flex;
+
+
+}
+
+.UserItemTopB {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.UserItemTitle {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.UserItemTitle span {
+    font-weight: 600;
+    font-size: 15px;
+
+}
+
+.UserItemTitle small {
+    font-weight: 500;
+    font-size: 12px;
+
+
+}
+
+.UserItemDesc {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.UserItemDescB {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+
+}
+
+.UserItemF {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.USerDP {
+    width: 50px;
+    height: 50px;
+
+}
+
+.UserGrid {
+    margin: 0 auto;
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+
+}
+
+.PgEditbox {
+    display: flex;
+
+}
+
+.PgEditboxA {
+    width: 50%;
+}
+
+.FormTitle {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.FormTitle span {
+    font-weight: 600;
+}
+
+.FormTitle small {
+    font-size: 14px;
+}
+
+.PgEditboxB {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50%;
+}
+
+.PgTipbox {
+
+    padding: 50px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, .08);
+
+    border-radius: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Activatebox {
+    padding: 10px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, .08);
+
+    border-radius: 20px;
+}
+
+.PMTitle {
+
+    text-align: center;
+    font-weight: 600;
+}
+
+.PMGrid {
+
+    margin: 0 auto;
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
+}
+
+.PMItemMain {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 22%);
+
+}
+
+.PMItem {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.OFFLINEMsg {
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: red;
+}
+
+.PMItemA {
+    padding: 10px;
+
+    display: flex;
+
+}
+
+.PMItemB {
+    margin-left: 10px;
+
+}
+
+.PMItemAImg {
+    min-width: 80px;
+    max-width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #eaeaf1b4;
+    padding: 10px;
+
+}
+
+.PMTypeText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+}
+
+.Activatebtn {
+    margin-top: 8px;
+}
+
+.Activatebtn small {
+    color: red;
+}
+
+.PMTypeText span {
+    font-weight: 700;
+}
+
+.Pmtag {
+    margin: 5px;
+
+    text-transform: uppercase;
+
+    padding: 3px 15px 2px 15px;
+    border-radius: 5px;
+    background-color: #405aee;
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.Pmtag span {
+    color: rgb(255, 255, 255);
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.PmtagCredit {
+    margin: 5px;
+    text-transform: uppercase;
+    border-radius: 5px;
+
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.PmtagCredit span {
+    color: #F39C12;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.PmtagCredit small {
+    color: #A3E4D7;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.PMItemFotter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #eaeaf1b4;
+    padding-top: 10px;
+}
+
 .LbPosterGrid {
     margin: 0 auto;
     display: grid;
     gap: 0.5rem;
     grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
 }
-.LBPosteritemimg{
+
+
+.containerLogin {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 17% 77%, rgba(17, 17, 17, 0.04) 0%, rgba(17, 17, 17, 0.04) 50%, rgba(197, 197, 197, 0.04) 50%, rgba(197, 197, 197, 0.04) 100%), radial-gradient(circle at 26% 17%, rgba(64, 64, 64, 0.04) 0%, rgba(64, 64, 64, 0.04) 50%, rgba(244, 244, 244, 0.04) 50%, rgba(244, 244, 244, 0.04) 100%), radial-gradient(circle at 44% 60%, rgba(177, 177, 177, 0.04) 0%, rgba(177, 177, 177, 0.04) 50%, rgba(187, 187, 187, 0.04) 50%, rgba(187, 187, 187, 0.04) 100%), linear-gradient(19deg, rgb(28, 117, 250), rgb(34, 2, 159));
+}
+
+.LoginFooterBox {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+
+
+}
+
+.ADtext {
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+
+
+}
+
+.Mobtext {
+    color: rgb(255, 122, 122);
+    font-size: 17px;
+    font-weight: 600;
+
+
+}
+
+.ADtexttwo {
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+.overlayLogin {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.MB {
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    background-color: white;
+}
+
+.MBFlex {
+    display: flex;
+
+}
+
+.MBFlexA {
+    width: 50%;
+    padding: 50px;
+}
+
+.MBFlexB {
+    width: 50%;
+    padding: 50px;
+}
+
+.DatepikerCustom {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none !important;
+    border: none !important;
+}
+
+.LbPosterGrid {
+    margin: 0 auto;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+}
+
+.LBPosteritemimg {
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
 }
-.LBPosteritemBottom{
+
+.LBPosteritemBottom {
     margin-top: 10px;
 }
-.LBPosteritem{
-   
+
+.LBPosteritem {
+
     background-color: white;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid rgb(233, 221, 221);
     margin: 10px;
-   
+
 }
-.LBsmallBoxHeader{
+
+.LBsmallBoxHeader {
     display: flex;
     justify-content: space-between;
 }
-.LBsmallBoxHeaderA span{
+
+.LBsmallBoxHeaderA span {
     font-weight: 700;
 }
 
@@ -41,8 +1380,7 @@
 
 .SeatBoxLayout {
     overflow: auto !important;
-    max-height: 540px;
-    padding: 50px;
+
 
 }
 
@@ -51,52 +1389,52 @@
 }
 
 .SeatItemMain {
-    width: 150px;
-    height: 70px;
+
     background-color: white;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 22%);
-    margin: 10px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     cursor: pointer;
 
 }
 
 
 .SeatItemMainSelected {
-    width: 150px;
-    height: 70px;
-   
+
+
     background-color: #5569ff;
-    color:white !important;
+    color: white !important;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 22%);
-    margin: 10px;
+
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     cursor: pointer;
 }
 
 
 .SeatItemOccupied {
-    width: 150px;
-    height: 70px;
-   
+
+
     background-color: #ff5555;
-    color:white !important;
+    color: white !important;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 22%);
-    margin: 10px;
+
 
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
 }
@@ -129,36 +1467,14 @@
     /* Color of the corners */
 }
 
-
-.MainSeatBox {
-    background-color: #f7f6f4;
-    border-radius: 10px;
+.SeatGridM {
+    margin: 0 auto;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
 
-.SeatBlock1 {
-    margin-top: 250px;
-    transform: rotate(90deg);
-    padding: 20px;
-    width: auto !important;
-    height: auto;
-}
 
-.SeatBlock2 {
-    display: flex;
-}
-
-.SeatBlock2A {
-
-    width: 40%;
-
-}
-
-.SeatBlock2B {
-    z-index:+1;
-    width: 60%;
-    padding: 20px;
-    border-left: 1px dashed rgb(192, 171, 171);
-}
 
 
 
@@ -201,6 +1517,7 @@
     justify-content: space-between;
     cursor: pointer;
 }
+
 .Branchitemlist {
 
     border-bottom: 1px solid rgb(240, 215, 215);
@@ -317,53 +1634,60 @@
 }
 
 .ProfileTabboxMenuItem {
-
-    padding: 10px;
-    background-color: rgb(246, 241, 241);
-    margin: 5px;
-    color: black;
-    font-weight: 500;
-    min-width: 140px;
-    text-align: center;
     cursor: pointer;
+    margin: 5px;
+    min-width: fit-content;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
     border-radius: 10px;
+
+    font-weight: 500;
+    border: 1px solid #d4d4dc;
+    background-color: white;
 
 }
 
 .ProfileTabboxMenuItemActive {
-
-    padding: 10px;
-
-    margin: 5px;
-
-    font-weight: 500;
-    min-width: 140px;
-    text-align: center;
     cursor: pointer;
-    border-radius: 10px;
+
     background-color: #5569ff;
 
     color: rgb(255, 255, 255);
 
+    margin: 5px;
+    min-width: fit-content;
+
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+
+    font-weight: 500;
+    border: 1px solid #d4d4dc;
+
 }
 
 
-
-.Profileboxgrid {
-    margin: 0 auto;
-    display: grid;
-    gap: 0.5rem;
-    grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
-}
 
 .ProfileboxgridItem {
 
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 22%);
+    box-shadow: 0 6px 5px rgba(0, 0, 0, .08);
 
     padding: 20px;
     background-color: white;
-    margin-top: 10px;
+    margin: 10px;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Pmtagflex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
 }
 
@@ -375,7 +1699,7 @@
     margin-left: 10px;
 }
 
-.MainProfileBoxB span {
+.PAbox span {
     font-weight: 600;
     font-size: 20px;
 }
@@ -433,12 +1757,7 @@
 }
 
 .logomainDB {
-    width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    /* height: 40px; */
+    width: 200px;
     cursor: pointer;
 
 }
@@ -462,6 +1781,26 @@
     display: grid;
     gap: 0.5rem;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+
+}
+
+.primaryColor {
+    color: #5569ff
+}
+
+.Linkurl {
+    color: #5569ff;
+    cursor: pointer;
+
+
+}
+
+.Linkurlf4d03f {
+    color: #f4d03f;
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration-line: underline;
+
 
 }
 
@@ -822,6 +2161,34 @@
     height: 550px;
 }
 
+.TitleHboxMain {
+    position: fixed;
+    top: 10%;
+    background-color: white;
+    width: 100%;
+    z-index: 999;
+
+}
+
+.TitleHbox {
+
+    margin-bottom: 0px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    padding-top: 20px;
+
+
+}
+
+.TitleHboxA {
+    width: 100%;
+}
+
+.TitleWithBackHeaderB {
+    width: 100%;
+}
+
 .TitleWithBackHeader {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -867,16 +2234,19 @@
 
 .LoginBoxContainer {
     margin: auto;
-    width: 50%;
+    width: 500px;
+
 
 
 }
 
 .LoginBox {
-    margin-top: 50px;
+
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 22%);
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
+
+    background-color: rgb(255, 255, 255);
 
 
 }
@@ -908,8 +2278,9 @@
 }
 
 .featuresimageboxA {
-    width: 50%;
+    width: 200px;
     text-align: center;
+    margin: 10px;
 }
 
 .ItemList {
@@ -1088,9 +2459,6 @@
 
     .LoginBox {
         padding: 20px;
-        background-color: rgb(255, 255, 255);
-        width: 100%;
-        margin: auto;
 
     }
 
@@ -1100,6 +2468,7 @@
         padding: 5px;
 
     }
+
 
     .TitleWithBackHeader {
         margin-top: 0px;
@@ -1238,14 +2607,29 @@
     }
 
     .LoginBoxContainer {
-
+        margin: auto;
         width: 100%;
+
+
+
+
+    }
+
+    .overlayLogin {
+
+        width: 95%;
+        height: 100%;
+        margin: auto;
+        display: block;
+        align-items: initial;
+        justify-content: initial;
+        padding-top: 20px;
 
 
     }
 
     .LoginBox {
-        margin-top: 50px;
+
         box-shadow: 0 1px 3px 0 rgb(0 0 0 / 22%);
         border-radius: 10px;
         padding: 20px;
@@ -1288,4 +2672,164 @@
         margin: 0px;
     }
 
+    .MboxMain {
+        margin-top: 60px;
+        padding: 5px;
+    }
+
+
+
+    .ProfileboxgridItem {
+        margin: 0px;
+        flex-direction: column;
+        justify-content: initial;
+
+
+    }
+
+    .Activebtnbox {
+        margin-top: 20px;
+
+    }
+
+    .RechargeBox {
+        padding: 20px;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+        margin: 5px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+    }
+
+    .Formbox {
+        max-width: 100%;
+    }
+
+    .OrderStatusBox {
+        margin: auto;
+        width: 100%;
+
+    }
+
+    .OrderDatabox {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, .08);
+        padding: 20px;
+
+    }
+
+    .PGDilogBox {
+        min-width: 300px;
+        border-radius: 20px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, .08);
+        padding: 10px;
+        background-color: white;
+
+    }
+
+    .CreditBBoxPbox {
+        padding: 20px;
+    }
+
+    .OrderDonebox {
+        padding: 5px;
+        margin: auto;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+
+
+    .TopFlexboxA {
+        width: 100%;
+    }
+
+    .TopFlexboxB {
+        width: 100%;
+        padding: 10px;
+    }
+
+
+    .ADtexttwo {
+        color: white;
+        font-size: 17px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .MBFlex {
+        display: flex;
+
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+
+
+    }
+
+    .MBFlexA {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .MBFlexB {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .MainCounterGrid {
+        margin: 0 auto;
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+
+    }
+
+
+    .AddSubsBoxMianPadding {
+        width: 100%;
+        margin: auto;
+        padding: 0px;
+    }
+
+    .DbTopBoxMain {
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, .08);
+        padding: 20px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+    }
+    .SettingsItemBox {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, .08);
+        padding: 10px;
+        background-color: white;
+    
+    }
+    .SettingsItem {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+      
+       
+    }
+   
 }

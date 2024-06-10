@@ -12,7 +12,8 @@ import {
 } from '@mui/material';
 import NextLink from 'next/link';
 import { SidebarContext } from 'src/contexts/SidebarContext';
-import { BsFillPersonLinesFill, BsFillGeoAltFill, BsFillLaptopFill, BsFillMortarboardFill, BsFillPeopleFill, BsCreditCard2BackFill, BsCurrencyRupee, BsFillGearFill } from "react-icons/bs";
+import CheckloginContext from '/context/auth/CheckloginContext'
+import { BsFillTicketPerforatedFill, BsStack, BsFillGeoAltFill, BsFillLaptopFill, BsTicketDetailed, BsUiChecksGrid, BsFillPeopleFill, BsPersonFillLock, BsPlugin, BsCurrencyRupee, BsFileEarmarkTextFill, BsShieldCheck, BsCalendar2CheckFill, BsFillPieChartFill, BsCartPlusFill } from "react-icons/bs";
 
 
 
@@ -163,160 +164,353 @@ function SidebarMenu() {
   const router = useRouter();
   const currentRoute = router.pathname;
 
+  const Contextdata = useContext(CheckloginContext)
+
   return (
     <>
-      <MenuWrapper>
+      {Contextdata.Data.Role == 1 &&
+        <MenuWrapper>
 
-        <List
-          component="div"
-          subheader={
-            <ListSubheader component="div" disableSticky>
-              Main Dashboards
-            </ListSubheader>
-          }
-        >
-          <SubMenuWrapper>
-            <List component="div">
-              <ListItem component="div">
-                <NextLink href="/dashboards/main" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/dashboards/main' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<BsFillLaptopFill />}
-                  >
-                    Dashboard
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/Academics/main" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/Academics/main' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<BsFillMortarboardFill />}
-                  >
-                    Academics
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/Users/main" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/Users/main' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<BsFillPeopleFill />}
-                  >
-                    Users
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/Educators/main" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/Educators/main' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<BsFillPersonLinesFill />}
-                  >
-                    Educators
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/Library/main" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/Library/main' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<BsFillGeoAltFill />}
-                  >
-                    Library & Study Center
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/Settings/main" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/Settings/main' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<BsFillGearFill />}
-                  >
+          <List
+            component="div"
+            subheader={
+              <ListSubheader component="div" disableSticky>
+                Main Dashboards
+              </ListSubheader>
+            }
+          >
+            <SubMenuWrapper>
+              <List component="div">
+                <ListItem component="div">
+                  <NextLink href="/admin/" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsFillLaptopFill />}
+                    >
+                      Dashboard
+                    </Button>
+                  </NextLink>
+                </ListItem>
+                <ListItem component="div">
+                  <NextLink href="/admin/users" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/users' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsFillPeopleFill />}
+                    >
+                      Users
+                    </Button>
+                  </NextLink>
+                </ListItem>
+                {/* <ListItem component="div">
+                  <NextLink href="/admin/staff" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/staff' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsPersonFillLock />}
+                    >
+                      Staff
+                    </Button>
+                  </NextLink>
+                </ListItem> */}
+
+                <ListItem component="div">
+                  <NextLink href="/admin/attendance" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/attendance' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsCalendar2CheckFill />}
+                    >
+                      Attendance
+                    </Button>
+                  </NextLink>
+                </ListItem>
+                <ListItem component="div">
+                  <NextLink href="/admin/branches" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/branches' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsFillGeoAltFill />}
+                    >
+                      Branches
+                    </Button>
+                  </NextLink>
+                </ListItem>
+
+
+                <ListItem component="div">
+                  <NextLink href="/admin/shifts" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/shifts' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsFillPieChartFill />}
+                    >
+                      Shifts
+                    </Button>
+                  </NextLink>
+                </ListItem>
+                <ListItem component="div">
+                  <NextLink href="/admin/seats" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/seats' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsUiChecksGrid />}
+                    >
+                      Seats
+                    </Button>
+                  </NextLink>
+                </ListItem>
+
+
+                <ListItem component="div">
+                  <NextLink href="/admin/addons" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/addons' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsCartPlusFill />}
+                    >
+                      Addon Products
+                    </Button>
+                  </NextLink>
+                </ListItem>
+                <ListItem component="div">
+                  <NextLink href="/admin/subscription-pass" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/subscription-pass' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsFillTicketPerforatedFill />}
+                    >
+                      Subscription Pass
+                    </Button>
+                  </NextLink>
+                </ListItem>
+                <ListItem component="div">
+                  <NextLink href="/admin/user-wallet" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/user-wallet' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsCurrencyRupee />}
+                    >
+                      User Wallet
+                    </Button>
+                  </NextLink>
+                </ListItem>
+
+              </List>
+
+
+
+            </SubMenuWrapper>
+          </List>
+          <List
+            component="div"
+            subheader={
+              <ListSubheader component="div" disableSticky>
+                Orders and Subscriptions
+              </ListSubheader>
+            }
+          >
+            <SubMenuWrapper>
+              <List component="div">
+
+                <ListItem component="div">
+                  <NextLink href="/admin/orders" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/orders' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsFileEarmarkTextFill />}
+                    >
+                      Manage  Orders
+                    </Button>
+                  </NextLink>
+                </ListItem>
+                <ListItem component="div">
+                  <NextLink href="/admin/subscriptions" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/subscriptions' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsTicketDetailed />}
+                    >
+                      Library Subscriptions
+                    </Button>
+                  </NextLink>
+                </ListItem>
+                <ListItem component="div">
+                  <NextLink href="/admin/addon-subscriptions" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/addon-subscriptions' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsStack />}
+                    >
+                      Addons Subscriptions
+                    </Button>
+                  </NextLink>
+                </ListItem>
+
+              </List>
+            </SubMenuWrapper>
+          </List>
+          <List
+            component="div"
+            subheader={
+              <ListSubheader component="div" disableSticky>
+                Settings
+              </ListSubheader>
+            }
+          >
+            <SubMenuWrapper>
+              <List component="div">
+
+                {/* <ListItem component="div">
+                  <NextLink href="/admin/settings/payment-method" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/settings/payment-method' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsPlugin />}
+                    >
+                      Payment Method
+                    </Button>
+                  </NextLink>
+                </ListItem> */}
+                <ListItem component="div">
+                  <NextLink href="/admin/settings" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/settings' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsPlugin />}
+                    >
                     Settings
-                  </Button>
-                </NextLink>
-              </ListItem>
-            </List>
-          </SubMenuWrapper>
-        </List>
-        <List
-          component="div"
-          subheader={
-            <ListSubheader component="div" disableSticky>
-              Reports
-            </ListSubheader>
-          }
-        >
-          <SubMenuWrapper>
-            <List component="div">
-              <ListItem component="div">
-                <NextLink href="/Wallet" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/Wallet' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<BsCreditCard2BackFill />}
-                  >
-                    Wallet
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/AllOrders" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/AllOrders' ? 'active' : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<BsCurrencyRupee />}
-                  >
-                    Manage Orders
-                  </Button>
-                </NextLink>
-              </ListItem>
+                    </Button>
+                  </NextLink>
+                </ListItem>
+               
+              </List>
+            </SubMenuWrapper>
+          </List>
+          <List
+            component="div"
+            subheader={
+              <ListSubheader component="div" disableSticky>
+                Billings & Credits
+              </ListSubheader>
+            }
+          >
+            <SubMenuWrapper>
+              <List component="div">
 
-            </List>
-          </SubMenuWrapper>
-        </List>
+                <ListItem component="div">
+                  <NextLink href="/admin/credits" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/credits' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsCurrencyRupee />}
+                    >
+                      My Credits
+                    </Button>
+                  </NextLink>
+                </ListItem>
+                <ListItem component="div">
+                  <NextLink href="/admin/my-subscription" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/my-subscription' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsShieldCheck />}
+                    >
+                      My Subscription
+                    </Button>
+                  </NextLink>
+                </ListItem>
+                {/* <ListItem component="div">
+                  <NextLink href="/admin/my-orders" passHref>
+                    <Button
+                      className={
+                        currentRoute === '/admin/my-orders' ? 'active' : ''
+                      }
+                      disableRipple
+                      component="a"
+                      onClick={closeSidebar}
+                      startIcon={<BsFileEarmarkTextFill />}
+                    >
+                      My Orders
+                    </Button>
+                  </NextLink>
+                </ListItem> */}
 
+              </List>
+            </SubMenuWrapper>
+          </List>
 
-      </MenuWrapper>
+        </MenuWrapper>
+      }
     </>
   );
 }

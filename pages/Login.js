@@ -7,6 +7,7 @@ import {
   Button,
   styled
 } from '@mui/material';
+import MYS from '/Styles/mystyle.module.css'
 import BaseLayout from 'src/layouts/BaseLayout';
 import CheckloginContext from '../context/auth/CheckloginContext'
 
@@ -37,27 +38,30 @@ function Overview() {
   const router = useRouter()
   const Contextdata = useContext(CheckloginContext)
   const [isLoading, setIsLoading] = useState(true);
-  
+
   useEffect(() => {
-    const Token = localStorage.getItem('userid');
-    if (!Token || Token.trim() === '') {
+    if (Contextdata.IsLogin) {
+      router.push('/admin')
+    } else {
       setIsLoading(false)
-    }else{
-      router.push('/dashboards/main')
     }
-  
-  }, [router.query]);
+
+  }, [Contextdata.Data]);
   return (
     <OverviewWrapper>
       <Head>
-        <title>Admin Login</title>
+        <title>Dashboard Login</title>
       </Head>
-      <div style={{ minHeight: '50px' }}></div>
-      <div style={{ margin: '20px' }}>
-        {!isLoading &&
-          <LoginBox />
-        }
+      <div className={MYS.containerLogin}>
+        <div className={MYS.overlayLogin}>
+          {!isLoading &&
+            <LoginBox />
+          }
+
+        </div>
+
       </div>
+
     </OverviewWrapper>
   );
 }

@@ -7,6 +7,7 @@ import {
   Button,
   styled
 } from '@mui/material';
+import MYS from '/Styles/mystyle.module.css'
 import BaseLayout from 'src/layouts/BaseLayout';
 import CheckloginContext from '../context/auth/CheckloginContext'
 
@@ -36,25 +37,31 @@ const OverviewWrapper = styled(Box)(
 function Overview() {
   const router = useRouter()
   const Contextdata = useContext(CheckloginContext)
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     if (Contextdata.IsLogin) {
-      router.push('/dashboards/main')
-      // router.push('/videoplay')
+      router.push('/admin')
     } else {
-      
+      setIsLoading(false)
     }
-  });
+
+  }, [Contextdata.Data]);
   return (
     <OverviewWrapper>
-      <Head> 
-        <title>Admin Dashboard Panel</title>
+      <Head>
+        <title>Dashboard</title>
       </Head>
-      <div style={{minHeight:'50px'}}></div>
-      <div style={{margin:'20px'}}>
-        {!Contextdata.IsLogin &&
-          <LoginBox />
-        }
-     </div>
+      <div className={MYS.containerLogin}>
+        <div className={MYS.overlayLogin}>
+          {!isLoading &&
+            <LoginBox />
+          }
+
+        </div>
+
+      </div>
+
     </OverviewWrapper>
   );
 }

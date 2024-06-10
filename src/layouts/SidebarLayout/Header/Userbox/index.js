@@ -1,6 +1,9 @@
-import { useRef, useState, useContext } from 'react';
-import CheckloginContext from '../../../../../context/auth/CheckloginContext'
+import { useRef, useState, useContext, useEffect } from 'react';
+import CheckloginContext from '/context/auth/CheckloginContext'
 import NextLink from 'next/link';
+
+import { MediaFilesFolder, MediaFilesUrl } from '/Data/config'
+import { useRouter } from 'next/router';
 
 import {
   Avatar,
@@ -9,19 +12,16 @@ import {
   Divider,
   Hidden,
   lighten,
-  List,
-  ListItem,
-  ListItemText,
+
   Popover,
   Typography
 } from '@mui/material';
 
-import InboxTwoToneIcon from '@mui/icons-material/InboxTwoTone';
+
 import { styled } from '@mui/material/styles';
 import ExpandMoreTwoToneIcon from '@mui/icons-material/ExpandMoreTwoTone';
-import AccountBoxTwoToneIcon from '@mui/icons-material/AccountBoxTwoTone';
+
 import LockOpenTwoToneIcon from '@mui/icons-material/LockOpenTwoTone';
-import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone';
 
 const UserBoxButton = styled(Button)(
   ({ theme }) => `
@@ -59,6 +59,7 @@ const UserBoxDescription = styled(Typography)(
 );
 
 function HeaderUserbox() {
+  const router = useRouter();
   const Contextdata = useContext(CheckloginContext)
   const user = {
     name: 'Catherine Pike',
@@ -68,6 +69,7 @@ function HeaderUserbox() {
 
   const ref = useRef(null);
   const [isOpen, setOpen] = useState(false);
+  const [Show, setShow] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -77,15 +79,41 @@ function HeaderUserbox() {
     setOpen(false);
   };
 
+
+  const LogOutUser = async () => {
+    let text = "Do you Really want to log out?";
+    if (confirm(text) == true) {
+      Show && Contextdata.Logout()
+      removeCookie('jwt_token');
+      setShow(false);
+
+    }
+
+
+  };
+
+  useEffect(() => {
+    if (Contextdata.IsLogin) {
+      setShow(true);
+    }
+
+  }, [Contextdata.Data]);
+
+  const removeCookie = (name) => {
+    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    alert('Logout Succesfully', 'success');
+    window.location.reload();
+  };
+
   return (
     <>
       <UserBoxButton color="secondary" ref={ref} onClick={handleOpen}>
-        <Avatar variant="rounded" alt={user.name} src={'/userdp.png'} />
+        <Avatar variant="rounded" alt={Show && Contextdata.Data.name} src={`${MediaFilesUrl}${MediaFilesFolder}/${Show && Contextdata.Data.dp}`} />
         <Hidden mdDown>
           <UserBoxText>
-            <UserBoxLabel variant="body1">Super Admin</UserBoxLabel>
+            <UserBoxLabel variant="body1">{Show && Contextdata.Data.name}</UserBoxLabel>
             <UserBoxDescription variant="body2">
-              All Controlls
+              {Show && Contextdata.Data.Role == 1 ? 'Admin' : 'Staff'}
             </UserBoxDescription>
           </UserBoxText>
         </Hidden>
@@ -107,19 +135,19 @@ function HeaderUserbox() {
         }}
       >
         <MenuUserBox sx={{ minWidth: 210 }} display="flex">
-          <Avatar variant="rounded" alt={user.name} src={'/userdp.png'} />
+          <Avatar variant="rounded" alt={Show && Contextdata.Data.name} src={`${MediaFilesUrl}${MediaFilesFolder}/${Show && Contextdata.Data.dp}`} />
           <UserBoxText>
-            <UserBoxLabel variant="body1">Super Admin</UserBoxLabel>
+            <UserBoxLabel variant="body1">{Show && Contextdata.Data.name}</UserBoxLabel>
             <UserBoxDescription variant="body2">
-              All Controlls
+              {Show && Contextdata.Data.mobile}
             </UserBoxDescription>
           </UserBoxText>
         </MenuUserBox>
         <Divider sx={{ mb: 0 }} />
-        
-       
+
+
         <Box sx={{ m: 1 }}>
-          <Button color="primary" fullWidth onClick={Contextdata.Logout}>
+          <Button color="primary" fullWidth onClick={LogOutUser}>
             <LockOpenTwoToneIcon sx={{ mr: 1 }} />
             Sign out
           </Button>

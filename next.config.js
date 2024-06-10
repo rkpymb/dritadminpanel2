@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['api.driteducation.com', 'localhost'],
+    domains: ['api.mysmartlibrary.in', 'localhost'],
   },
   eslint: {
     ignoreDuringBuilds: true,

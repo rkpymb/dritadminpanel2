@@ -3,7 +3,7 @@ import { useRouter, useParams } from 'next/router'
 import { useState, useEffect, useContext } from 'react';
 import { Box, alpha, lighten, useTheme } from '@mui/material';
 import PropTypes from 'prop-types';
-import CheckloginContext from '../../../context/auth/CheckloginContext'
+import CheckloginContext from '/context/auth/CheckloginContext'
 import Sidebar from './Sidebar';
 import Header from './Header';
 
@@ -11,20 +11,15 @@ const SidebarLayout = ({ children }) => {
   const Contextdata = useContext(CheckloginContext)
   const theme = useTheme();
   const router = useRouter()
-  const [IsLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    const Token = localStorage.getItem('userid');
-    if (!Token || Token.trim() === '') {
-      router.push('/Login')
-    }
     if (Contextdata.IsLogin == true) {
-      setIsLoading(false);
+      console.log(Contextdata.Data.Role)
     }
-
-  }, [Contextdata.IsLogin]);
+  }, [Contextdata.Data]);
   return (
     <>
-      {!IsLoading &&
+      <div>
+
         <Box
           sx={{
             flex: 1,
@@ -54,6 +49,7 @@ const SidebarLayout = ({ children }) => {
         >
           <Header />
           <Sidebar />
+
           <Box
             sx={{
               position: 'relative',
@@ -70,7 +66,10 @@ const SidebarLayout = ({ children }) => {
           </Box>
         </Box>
 
-      }
+
+      </div>
+
+
 
     </>
   );
